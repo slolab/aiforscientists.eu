@@ -44,3 +44,16 @@ Each recipe links to the practices it follows, and practices can link to recipes
 - **Scientists** who use agents and want to use them for more tasks, safely.
 - **Group leaders** who decide what their group should try next.
 - **Core facilities and institutes** who decide which skills and systems to support.
+
+## What institutes should build
+
+Individual scientists start using agents without help.
+Institutes need to provide what individuals cannot:
+
+- Well-defined problems, each with a metric and several datasets.
+- A shared library of reviewed skills.
+- Sandboxed compute.
+- Documentation that agents can read.
+- Peer mentoring.
+- Capable tools for administrative staff.
+  Their processes set the pace for everyone else.

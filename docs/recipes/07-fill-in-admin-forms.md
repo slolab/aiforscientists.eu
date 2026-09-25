@@ -3,7 +3,7 @@ title: Let agents fill in administrative forms
 nav_title: "Fill in admin forms"
 recipe_id: R-07
 status: tried
-stage: Operate
+stage: Operations
 verifiability: Machine-checkable
 autonomy: Fills in forms; a person signs and submits
 first_added: 2026-09-25
@@ -18,7 +18,7 @@ practices:
   - title: State human-in-the-loop requirements
     slug: 09-human-in-the-loop
     note: the agent fills in the form, and a person submits it.
-tags: [Operate, Machine-checkable]
+tags: [Operations, Machine-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
@@ -40,7 +40,6 @@ A later goal is one assistant connected to finance, HR, grants and the doctoral 
 ## How to check the output
 
 The totals on a form must match the receipts.
-Checking totals, dates and receipts takes about a minute.
 A person submits the form.
 
 ## Examples
@@ -54,6 +53,7 @@ A person submits the form.
 ## Known problems
 
 - Admin and HR staff often do not have access to agents, so only researchers save time.
+  A licence costs about €30 per person a month.
 - An agent with access to finance or HR data handles personal data.
   See [Where to draw the line](../guide/limits.md#handle-with-care).
 
@@ -63,4 +63,5 @@ A person submits the form.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

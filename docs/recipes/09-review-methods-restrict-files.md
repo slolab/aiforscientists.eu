@@ -3,7 +3,7 @@ title: Review every method change, and limit what agents can write to
 nav_title: "Review methods, limit file access"
 recipe_id: R-09
 status: tried
-stage: Design
+stage: Analyze results
 verifiability: Hard to verify
 autonomy: Sandboxed; a second person reviews method changes
 first_added: 2026-09-25
@@ -18,7 +18,7 @@ practices:
   - title: Evaluate tools before trust
     slug: 08-evaluate-tools-before-trust
     note: a second reviewer checks each method change.
-tags: [Design, Hard to verify]
+tags: [Analyze results, Hard to verify]
 ---
 
 <!-- RECIPE_TITLE -->

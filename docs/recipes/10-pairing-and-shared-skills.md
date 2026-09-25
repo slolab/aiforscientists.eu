@@ -3,7 +3,7 @@ title: Teach agent use through pairing and shared skills
 nav_title: "Pairing and shared skills"
 recipe_id: R-10
 status: tried
-stage: Operate
+stage: Operations
 verifiability: Expert-checkable
 autonomy: n/a
 first_added: 2026-09-25
@@ -15,7 +15,7 @@ practices:
   - title: Match the method to the task
     slug: 01-match-method-to-task
     note: new users need to learn when not to use an agent.
-tags: [Operate, Expert-checkable]
+tags: [Operations, Expert-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
@@ -31,6 +31,7 @@ A shared set of skills means groups do not each build the same tools.
 1. Hold a two-hour session where everyone shows how they use agents.
 2. Pair your most experienced users with your least experienced.
 3. Before expanding use, hold a session on what could go wrong.
+   Groups rated this session among the most useful.
 4. Keep one shared skills repository, including skills that help people write new skills.
 5. Hold an open drop-in meeting for several groups.
 
@@ -55,4 +56,5 @@ After three months, ask again who uses agents every week, and for what.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

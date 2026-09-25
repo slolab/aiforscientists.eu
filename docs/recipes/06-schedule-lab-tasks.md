@@ -3,7 +3,7 @@ title: Run recurring lab tasks on a schedule
 nav_title: "Schedule recurring lab tasks"
 recipe_id: R-06
 status: tried
-stage: Operate
+stage: Operations
 verifiability: Machine-checkable
 autonomy: Runs on a schedule and reports what it did
 first_added: 2026-09-25
@@ -17,7 +17,7 @@ practices:
   - title: State human-in-the-loop requirements
     slug: 09-human-in-the-loop
     note: decide when a person reads the agent's report.
-tags: [Operate, Machine-checkable]
+tags: [Operations, Machine-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
@@ -30,9 +30,9 @@ Each run is small, and its result is easy to check.
 ## Steps
 
 1. Schedule an agent to read the week's project updates and post a summary on the morning before lab meeting.
-   The summary lists overlaps between projects, reminders and open decisions.
-2. Let an agent watch cluster jobs, fix and resubmit failed runs, and log each change.
-3. Let it remind people to delete old checkpoints when storage is low.
+   The summary lists overlaps between projects, overdue items and suggested priorities.
+2. Let an agent watch cluster jobs, find the cause of each crash, fix simple errors, resubmit, and log each change.
+3. Let it remind people to delete old checkpoints before shared storage is full.
 
 ## How to check the output
 
@@ -58,4 +58,5 @@ A person reads the summary before the meeting and the job log once a day.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

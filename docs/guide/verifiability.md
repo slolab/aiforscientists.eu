@@ -26,7 +26,7 @@ Each recipe shows its level in the box "About this recipe".
 
 <div class="afs-quadrants" markdown="0">
   <div class="afs-quadrant afs-quadrant--danger">
-    <strong>Danger zone</strong>
+    <strong>Danger</strong>
     <p>Hard to check, high freedom. All reported errors happened here: changed methods, tuned seeds, open folders.</p>
   </div>
   <div class="afs-quadrant afs-quadrant--automate">
@@ -44,8 +44,8 @@ Each recipe shows its level in the box "About this recipe".
 </div>
 <p class="afs-quadrants__axes">Left to right: harder to easier to check. Bottom to top: less to more freedom for the agent.</p>
 
-- **Start with the underused tasks.** If the output is easy to check and agents are not doing the task yet, start there.
-- **Make risky tasks checkable before giving agents more freedom.** Add tests, metrics and datasets until the output of a task is easy to check.
+- **Delegate.** Start with the underused tasks. If the output is easy to check and agents are not doing the task yet, start there.
+- **Add checks.** Before giving agents more freedom on a risky task, make its output checkable. Add tests, metrics and datasets until the output is easy to check.
 
 ## Three steps of freedom
 

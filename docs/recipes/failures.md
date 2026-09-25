@@ -13,7 +13,8 @@ Each entry says what happened, how it was found, and which recipe now prevents i
 **What happened.** An agent that was restructuring an analysis changed the cross-validation scheme.
 The paper's main result changed.
 
-**How it was found.** A co-author ran the evaluation again.
+**How it was found.** The changed code looked correct.
+A co-author found the change by reading the code carefully.
 
 **Recipes that prevent it.** [Review methods, limit file access](09-review-methods-restrict-files.md), [Run experiments on fixed code](02-run-experiments-on-fixed-code.md).
 
@@ -30,7 +31,7 @@ The paper's main result changed.
 **What happened.** On a shared cluster, many group folders could be written to by any user, and none were backed up.
 One wrong agent job could have deleted a group's data.
 
-**How it was found.** Someone checked the permissions after the round-table.
+**How it was found.** A check of folder permissions on the cluster.
 
 **Recipes that prevent it.** [Review methods, limit file access](09-review-methods-restrict-files.md).
 

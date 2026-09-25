@@ -3,7 +3,7 @@ title: Define a problem as metrics and datasets, and let an agent search for met
 nav_title: "Let agents search for methods"
 recipe_id: R-01
 status: tried
-stage: Optimize & analyze
+stage: Analyze results
 verifiability: Machine-checkable
 autonomy: Works alone against a fixed benchmark
 first_added: 2026-09-25
@@ -16,29 +16,32 @@ practices:
   - title: Match the method to the task
     slug: 01-match-method-to-task
     note: an agent search only makes sense if there is a metric.
-tags: [Optimize & analyze, Machine-checkable]
+tags: [Analyze results, Machine-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
 
 ## Summary
 
-Write the research question as one or more metrics and several datasets.
+Write the research question as a metric, several datasets and a baseline.
 Then let an agent try methods: parameter sweeps, rewritten methods, or a search over code variants.
 The benchmark scores each attempt, so the agent does not need to be told which method to use.
+The quality of the problem definition limits the results more than the agent does.
 
 ## Steps
 
 1. Pick a problem with data you already have.
 2. Write the metric and the evaluation script before the agent starts.
 3. Use at least three datasets, so that a result that only works on one of them is visible.
-4. Do not give the agent write access to the evaluation code.
-5. Move to harder problems only when results on the first one are stable.
+4. Run a baseline method, so each result can be compared with it.
+5. Do not give the agent write access to the evaluation code.
+6. Move to harder problems only when results on the first one are stable.
 
 ## How to check the output
 
 The benchmark scores each result.
 A person checks the benchmark itself: are the splits, metrics and seeds the ones written down in step 2?
+Is the baseline result correct?
 A result that improves only one dataset does not count.
 
 ## Examples
@@ -57,4 +60,5 @@ A result that improves only one dataset does not count.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

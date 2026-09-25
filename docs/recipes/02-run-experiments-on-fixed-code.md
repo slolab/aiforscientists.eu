@@ -3,7 +3,7 @@ title: Let agents run experiments on code they cannot change
 nav_title: "Run experiments on fixed code"
 recipe_id: R-02
 status: tried
-stage: Run
+stage: Run experiments
 verifiability: Machine-checkable
 autonomy: Works alone; cannot change the code
 first_added: 2026-09-25
@@ -18,7 +18,7 @@ practices:
   - title: State human-in-the-loop requirements
     slug: 09-human-in-the-loop
     note: each of the three levels below has a different human check.
-tags: [Run, Machine-checkable]
+tags: [Run experiments, Machine-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
@@ -47,7 +47,8 @@ In the third step a person reviews each change before it is merged.
 
 ## Examples
 
-- A hyperparameter search by an agent, on fixed code, found better settings than students and group leaders had chosen.
+- One group lets agents run thousands of experiments on fixed code.
+  Within those limits, the agent tuned models better than the group's students or its group leader.
 - In protein language model training, an agent implements about ten published methods a day.
   A benchmark scores each one, and a person decides which to keep.
 
@@ -62,4 +63,5 @@ In the third step a person reviews each change before it is merged.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

@@ -3,7 +3,7 @@ title: Keep project documents as plain text in the repository
 nav_title: "Keep project documents as text"
 recipe_id: R-05
 status: tried
-stage: Design
+stage: Plan experiments
 verifiability: Expert-checkable
 autonomy: Proposes changes as pull requests
 first_added: 2026-09-25
@@ -15,7 +15,7 @@ practices:
   - title: Write documentation and data for agents
     slug: 05-documentation-and-data-for-agents
     note: the same rule, applied to a lab.
-tags: [Design, Expert-checkable]
+tags: [Plan experiments, Expert-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
@@ -40,7 +40,8 @@ A person reviews each pull request that changes a design or an assumption.
 ## Examples
 
 - One lab moved its notes to a tool that stores everything as Markdown and works from the command line.
-- Another lab gives tasks to its cluster agent only through issues in its code repository, and reviews every pull request the agent opens.
+- Another lab works with its cluster agent only through the issue tracker of its code repository.
+  Requests go in as issues, the agent replies in comments, and changes arrive as pull requests for review.
 
 ## Known problems
 
@@ -53,4 +54,5 @@ A person reviews each pull request that changes a design or an assumption.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

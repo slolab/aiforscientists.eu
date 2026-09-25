@@ -16,6 +16,8 @@ Some work should stay with people even when an agent could do it and the output 
 - **Scientific claims and authorship.** An agent is never an author.
   For every claim in a paper, a person has checked it and is responsible for it.
 - **Clinical decisions.** No diagnosis or treatment output without validation and accreditation.
+  One group built a diagnostic sequencing pipeline with agents in one summer.
+  It still needs validation and accreditation before it is used for patients.
 - **Actions that cannot be undone, without a person's approval.** Deleting data, sending emails, and submitting forms, papers or payments.
 
 ## Take care { #handle-with-care }
@@ -26,7 +28,8 @@ Some work should stay with people even when an agent could do it and the output 
   Some tasks should be done by hand first.
 - <a id="sameness"></a>**Sameness.** Slides, reviews and possibly research directions are becoming more alike.
 - **Costs.** Tokens, compute, energy, and dependence on one vendor.
-  Budget for these costs, and review your choice of tools regularly.
+  Budget for these costs.
+  Use the strongest tool available, and review that choice often.
 - **The evidence behind these recipes.** The first recipes come from one research centre.
   They are based on what people reported, and people who already use agents a lot are overrepresented.
   Test them before relying on them.

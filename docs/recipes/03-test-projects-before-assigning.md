@@ -3,7 +3,7 @@ title: Test a project with an agent before giving it to a student
 nav_title: "Test projects before assigning them"
 recipe_id: R-03
 status: tried
-stage: Ask & select
+stage: Frame questions
 verifiability: Expert-checkable
 autonomy: Drafts; a person decides
 first_added: 2026-09-25
@@ -15,7 +15,7 @@ practices:
   - title: Match the method to the task
     slug: 01-match-method-to-task
     note: the prototype shows whether the project can work.
-tags: [Ask & select, Expert-checkable]
+tags: [Frame questions, Expert-checkable]
 ---
 
 <!-- RECIPE_TITLE -->
@@ -24,13 +24,14 @@ tags: [Ask & select, Expert-checkable]
 
 Before giving a project to a student, ask an agent to question the project description and build a small prototype on data the group already has.
 If the prototype shows no result, the project is not ready.
+A decision that used to take months of a student's time now takes the group leader an afternoon.
 
 ## Steps
 
 1. Write the project description as you would for a student.
 2. Ask the agent to question it: what is assumed, which data will be used, and what counts as success.
 3. Revise the description.
-4. Ask the agent for a small prototype on existing data, in one or two days.
+4. Ask the agent for a small prototype on existing data.
 5. If the prototype finds nothing on existing data, do not assign the project yet.
 
 ## How to check the output
@@ -58,4 +59,5 @@ Code quality does not matter at this stage.
 
 ## Change history
 
+- 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.
