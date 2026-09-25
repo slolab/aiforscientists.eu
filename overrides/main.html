@@ -1,0 +1,21 @@
+{#- Site-wide banner marking this build as a demo. -#}
+{% extends "base.html" %}
+
+{#- Browser tab title: the site name alone on the home page, and the short
+    `nav_title` on recipe pages, so tabs do not repeat the site name or show a
+    full recipe sentence. -#}
+{% block htmltitle %}
+  {% if page.is_homepage %}
+    <title>{{ config.site_name }}</title>
+  {% elif page.meta and page.meta.nav_title %}
+    <title>{{ page.meta.nav_title }} - {{ config.site_name }}</title>
+  {% elif page.meta and page.meta.title %}
+    <title>{{ page.meta.title }} - {{ config.site_name }}</title>
+  {% else %}
+    <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+  {% endif %}
+{% endblock %}
+
+{% block announce %}
+  <p class="afs-demo-banner"><strong>Demo.</strong> This site shows the idea only. Recipes are drafts, names and details are removed from examples, and skill and repository links are placeholders.</p>
+{% endblock %}

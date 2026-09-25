@@ -1,0 +1,142 @@
+/* aiforscientists.eu additions on top of the sibling site's home.css. */
+
+/* Demo banner (Material announce bar). */
+.md-banner {
+  background: #fdf1e3;
+  color: #6b3d05;
+}
+
+.afs-demo-banner {
+  margin: 0;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+/* Recipe status badges. */
+.afs-badge--tried {
+  background: var(--afs-tint-2);
+  color: var(--afs-accent-dark);
+}
+
+.afs-badge--reproduced {
+  background: #d3efe9;
+  color: #0b5c50;
+}
+
+/* Output-check levels, used in tables on the guide and skills pages. */
+.afs-check {
+  display: inline-block;
+  padding: 0.05em 0.55em;
+  border-radius: 1em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.afs-check--machine {
+  background: #d3efe9;
+  color: #0b5c50;
+}
+
+.afs-check--expert {
+  background: #f5e7c0;
+  color: #7a5d00;
+}
+
+.afs-check--hard {
+  background: #f7dcdc;
+  color: #a12222;
+}
+
+/* Placeholder links (demo only). */
+.md-typeset a.afs-placeholder {
+  color: var(--afs-muted);
+  text-decoration: underline dotted;
+  cursor: not-allowed;
+}
+
+/* Two-by-two grid on the verifiability guide. */
+.afs-quadrants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.afs-quadrant {
+  padding: 0.8rem 0.95rem;
+  border: 1px solid var(--afs-line);
+  border-radius: 8px;
+}
+
+.afs-quadrant strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.afs-quadrant p {
+  margin: 0;
+  font-size: 0.74rem;
+}
+
+.afs-quadrant--danger { background: #fbeeee; border-color: #f0cccc; }
+.afs-quadrant--danger strong { color: #a12222; }
+.afs-quadrant--automate { background: #eaf6f3; border-color: #c9e8e0; }
+.afs-quadrant--automate strong { color: #0b5c50; }
+.afs-quadrant--human { background: var(--afs-soft); }
+.afs-quadrant--human strong { color: var(--afs-muted); }
+.afs-quadrant--underused { background: #ffffff; }
+.afs-quadrant--underused strong { color: var(--afs-accent-dark); }
+
+.afs-quadrants__axes {
+  margin: 0 0 1.2rem;
+  color: var(--afs-muted);
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 30em) {
+  .afs-quadrants {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* aiforscience.eu strip under the hero: a light band. The dark intro section
+   below bulges up into it (the same curve as above the Contribute section). */
+.afs-publication-strip {
+  background: var(--afs-soft-2);
+  color: var(--afs-ink);
+}
+
+.afs-publication-strip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 130vw;
+  height: clamp(0.85rem, 2.1vw, 1.45rem);
+  border-radius: 50%;
+  background: var(--afs-dark-gradient);
+  transform: translate(-50%, 50%);
+}
+
+.afs-publication-strip__grid {
+  position: relative;
+  z-index: 1;
+  /* Bottom padding adds part of what the bulge covers at the centre (half the
+     bulge height). Adding about three quarters of that looks centred, because
+     the eye averages across the curved edge. */
+  padding-top: 0.7rem;
+  padding-bottom: calc(0.7rem + clamp(0.3125rem, 0.775vw, 0.5375rem));
+}
+
+.afs-publication-strip__note {
+  color: var(--afs-muted);
+}
+
+.afs-publication-strip__link {
+  color: var(--afs-accent-dark);
+}

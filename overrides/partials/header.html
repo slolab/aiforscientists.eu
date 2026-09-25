@@ -1,0 +1,45 @@
+{#-
+  Single-level header for aiforscientists.eu.
+  Based on Material for MkDocs' default header partial, with a small custom
+  pill navigation added between the title and search (pattern from the
+  BioCypher documentation site).
+-#}
+{% set class = "md-header md-header--shadow" %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Open navigation">
+      {% set icon = config.theme.icon.menu or "material/menu" %}
+      {% include ".icons/" ~ icon ~ ".svg" %}
+    </label>
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo afs-brand" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+      <span class="afs-header-brand">{{ config.site_name }}</span>
+    </a>
+
+    {#- Primary entry point: the recipes, next to the title. -#}
+    <a class="afs-header-practices" href="{{ 'recipes/01-search-for-methods.html' | url }}" {% if page and page.url.startswith('recipes/') %}aria-current="page"{% endif %}>Recipes</a>
+
+    <div class="afs-header-nav" aria-label="Community">
+      <a href="{{ 'skills.html' | url }}" {% if page and page.url.startswith('skills') %}aria-current="page"{% endif %}>Skills</a>
+      <a href="{{ 'about/contribute.html' | url }}" {% if page and page.url.startswith('about/contribute') %}aria-current="page"{% endif %}>Contribute</a>
+      <a href="https://aiforscience.eu" target="_blank" rel="noopener noreferrer">
+        Practices
+        <span class="afs-header-nav__ext" aria-hidden="true">{% include ".icons/material/open-in-new.svg" %}</span>
+      </a>
+    </div>
+
+    {% if config.extra.alternate %}
+      {% include "partials/alternate.html" %}
+    {% endif %}
+    {% if "material/search" in config.plugins %}
+      {% set search = config.plugins["material/search"] | attr("config") %}
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search" aria-label="Open search">
+          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+    {% endif %}
+  </nav>
+</header>

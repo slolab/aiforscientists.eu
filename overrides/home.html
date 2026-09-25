@@ -1,0 +1,66 @@
+{#-
+  Landing page template for aiforscientists.eu.
+  Activated per-page with front matter `template: home.html` in index.md.
+  Hero + aiforscience.eu strip; the section bands live in index.md.
+-#}
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+
+  <section class="afs-hero" markdown="0">
+    <div class="md-grid afs-hero__grid">
+      <div class="afs-hero__content">
+        <div class="afs-hero__title">
+          <h1 class="afs-hero__headline">
+            Using agents in<br>
+            daily research.
+          </h1>
+          <span class="afs-hero__logo">{% include "partials/logo.html" %}</span>
+        </div>
+        <p class="afs-hero__tagline">
+          Recipes for giving research tasks to agents.
+          Each recipe lists the steps, how to check the output, and known problems.
+          Written by scientists who use them. Anyone can contribute.
+        </p>
+        <div class="afs-hero__actions">
+          <a class="afs-hero__actions--primary" href="{{ 'recipes/01-search-for-methods.html' | url }}">Read the recipes →</a>
+          <a href="{{ 'guide/verifiability.html' | url }}">Which work to give to agents →</a>
+        </div>
+      </div>
+
+      {#- The recipes, straight in the hero. Rendered from the Recipes nav
+          section so list, order and labels have one source (each page's
+          `nav_title`, applied by hooks/recipe_pages.py). -#}
+      <aside class="afs-hero-index" aria-label="The recipes">
+        <div class="afs-hero-index__head">
+          <span class="afs-hero-index__overline">The recipes</span>
+        </div>
+        {% for item in nav %}
+          {% if item.is_section and item.title == 'Recipes' %}
+            {% for p in item.children %}
+              {% if p.is_page and not p.file.src_uri.endswith('failures.md') %}
+                <a class="afs-hero-index__row" href="{{ p.url | url }}">
+                  <span class="afs-hero-index__num">{{ loop.index }}</span>
+                  <span class="afs-hero-index__title">{{ p.title }}</span>
+                </a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </aside>
+    </div>
+
+    <div class="afs-publication-strip">
+      <div class="md-grid afs-publication-strip__grid">
+        <a class="afs-doi" href="https://aiforscience.eu">
+          <span class="afs-doi__key">See also</span>
+          <span class="afs-doi__val">aiforscience.eu</span>
+        </a>
+        <span class="afs-publication-strip__note">Best practices for agentic AI in science. Each recipe links to the practices it follows.</span>
+        <a class="afs-publication-strip__link" href="https://aiforscience.eu">Best practices →</a>
+      </div>
+    </div>
+
+  </section>
+{% endblock %}

@@ -1,0 +1,58 @@
+/* Status badges used in practice metadata blocks. Site palette lives in
+   home.css. */
+
+.afs-badge {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  border-radius: 1em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+.afs-badge--draft {
+  background: #f2e8c9;
+  color: #7a5d00;
+}
+
+.afs-badge--reviewed {
+  background: #d7e9f2;
+  color: #0e6478;
+}
+
+.afs-badge--endorsed {
+  background: #d3efe9;
+  color: #0b5c50;
+}
+
+/* Category tags used on the short-version page to mark the kind of decision
+   each point is (enable / resource / require) or the risk of not acting. */
+
+.afs-badge--enable,
+.afs-badge--resource,
+.afs-badge--require,
+.afs-badge--risk {
+  margin-right: 0.45em;
+  text-transform: uppercase;
+}
+
+.afs-badge--enable {
+  background: #d3efe9;
+  color: #0b5c50;
+}
+
+.afs-badge--resource {
+  background: #f5e7c0;
+  color: #7a5d00;
+}
+
+.afs-badge--require {
+  background: #d7e9f2;
+  color: #0e6478;
+}
+
+.afs-badge--risk {
+  background: #f7dcdc;
+  color: #a12222;
+}
