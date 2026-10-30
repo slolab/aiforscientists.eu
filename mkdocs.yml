@@ -102,13 +102,12 @@ nav:
 
 extra:
   # giscus comment threads under each recipe (overrides/partials/comments.html).
-  # Empty ids switch the threads off. Fill them in from https://giscus.app once
-  # Discussions are enabled on the repository and the category exists.
+  # Empty ids switch the threads off. The ids come from https://giscus.app.
   giscus:
     repo: slolab/aiforscientists.eu
     repo_id: R_kgDOUrd0KQ
     category: Recipe comments
-    category_id: ""
+    category_id: DIC_kwDOUrd0Kc4DKAGZ
 
 copyright: >-
   © 2026 AI for Scientists contributors. Content licensed
