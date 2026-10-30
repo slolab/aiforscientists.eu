@@ -22,6 +22,9 @@ practices:
   - title: State human-in-the-loop requirements
     slug: 09-human-in-the-loop
     note: decide when a person reads what a scheduled agent produced.
+  - title: Make provenance and citation first-class
+    slug: 07-provenance-and-citation
+    note: keep the record of the work outside the provider's chat history.
 tags: [Prepare for agents, Expert-checkable]
 comments: true
 ---
@@ -45,6 +48,8 @@ Once the material is readable, recurring lab tasks can run on a schedule, and re
    The digest lists overlaps between projects, overdue items and suggested priorities.
 5. Index old material, such as slide decks, so an agent can find and reuse it.
 6. When you build something reusable, add it to a shared skills repository.
+7. Keep drafts, analyses and decisions that matter in the repository, not only in a chat assistant's history.
+   The history belongs to the provider's account and is lost when the account, the licence or the contract ends.
 
 ## How to check the output
 
@@ -70,6 +75,10 @@ The group leader reads the digest before the meeting.
 - If nobody updates the agent's folder, the agent works from an old plan.
   Date the notes, and delete what is no longer true.
 - A skills repository with no one responsible for it goes out of date.
+- Work that exists only in a chat assistant's history can disappear.
+  A professor described in Nature how one settings change deleted two years of chats behind grant applications, teaching material and manuscript drafts, and the provider could not restore them ([source](https://aiforscience.eu/library/ref-bucher-chatgpt-data-loss-2026/)).
+  When one institution cancelled its chat-assistant licences for some staff, users found that projects existed only in the provider's history.
+  Some institutional tiers offer no complete export, so move the work out before access ends.
 - A scheduled agent should not delete files without a person's confirmation.
   See [Where to draw the line](../guide/limits.md#do-not-delegate).
 
@@ -79,6 +88,7 @@ The group leader reads the digest before the meeting.
 
 ## Change history
 
+- 2026-10-30: Added a step and a known problem on keeping work outside a chat assistant's history.
 - 2026-10-30: Renumbered to follow point 1 of the submitted Comment.
   Merged the former recipes "Keep project documents as text" and "Schedule recurring lab tasks".
 - 2026-10-28: Updated to match the presubmission draft of the Comment.
