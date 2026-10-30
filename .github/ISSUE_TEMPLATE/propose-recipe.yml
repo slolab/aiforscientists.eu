@@ -1,0 +1,38 @@
+name: Propose a recipe
+description: You give a task to an agent and the results hold up.
+title: "[Recipe] "
+labels: ["recipe-proposal", "triage"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: The recipe, as an instruction
+      placeholder: 'e.g. "Let agents fill in administrative forms"'
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: How to check the output
+      description: Who or what checks it, and how long it takes.
+    validations:
+      required: true
+  - type: textarea
+    id: problems
+    attributes:
+      label: What went wrong so far
+    validations:
+      required: false
+  - type: textarea
+    id: setting
+    attributes:
+      label: Your setting
+      description: Field, kind of group, tools and models used. How long you have used the recipe.
+    validations:
+      required: true

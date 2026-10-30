@@ -1,0 +1,27 @@
+{#-
+  giscus comments, rendered on pages with `comments: true` front matter.
+  Threads live in the repo's Discussions under the category set in
+  mkdocs.yml (`extra.giscus`), one per page, mapped by pathname. Nothing is
+  rendered until `repo_id` and `category_id` are filled in there.
+-#}
+{% set giscus = config.extra.giscus %}
+{% if page.meta.comments and giscus and giscus.repo_id and giscus.category_id %}
+  <h2 id="__comments">Discussion</h2>
+  <p>Used this recipe or skill, or seen it fail? Say so here. Comments need a GitHub account; without one, write to <a href="mailto:aiforscience@googlegroups.com">aiforscience@googlegroups.com</a>.</p>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="{{ giscus.repo }}"
+    data-repo-id="{{ giscus.repo_id }}"
+    data-category="{{ giscus.category }}"
+    data-category-id="{{ giscus.category_id }}"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+  ></script>
+{% endif %}

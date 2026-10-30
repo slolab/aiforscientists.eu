@@ -1,0 +1,59 @@
+name: Contribute a skill
+description: Share a local version of a published brief, or propose a new brief.
+title: "[Skill] "
+labels: ["skill", "triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of contribution
+      options:
+        - A local version of a published brief
+        - A new brief
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+      placeholder: "e.g. travel-reimbursement"
+    validations:
+      required: true
+  - type: input
+    id: recipe
+    attributes:
+      label: Recipe it belongs to
+      placeholder: "Recipe number and title"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to your version (for a local version)
+      description: A public repository or file. It is listed on the skill's page.
+    validations:
+      required: false
+  - type: textarea
+    id: brief
+    attributes:
+      label: The brief (for a new brief)
+      description: Purpose, inputs, output, steps, local details (questions only a local user can answer), never, how to check the output, test case. See https://aiforscientists.eu/skills/#what-a-brief-contains
+      render: markdown
+    validations:
+      required: false
+  - type: textarea
+    id: tested
+    attributes:
+      label: How it was tested
+      description: Where it runs, with which agent and model, and the result of the test case.
+    validations:
+      required: true
+  - type: checkboxes
+    id: clean
+    attributes:
+      label: Before you submit
+      options:
+        - label: The skill or brief contains no internal paths, names, credentials or institute forms.
+          required: true
+        - label: I can share it under an open licence.
+          required: true

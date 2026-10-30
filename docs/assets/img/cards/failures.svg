@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%">
+  <!-- What went wrong: the run drifts away from the plan; the drift is ringed and caught. -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M56 120 L104 104 L152 92 L200 80 L264 64" stroke="#a7a3a0" stroke-width="1.4" stroke-dasharray="5 5"/>
+    <path d="M56 120 L104 104 L152 96 L188 112 L216 132" stroke="#8f3a1b" stroke-width="1.6"/>
+    <path d="M188 112 C210 96 230 74 264 64" stroke="#0b5c50" stroke-width="1.4"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="2">
+    <circle cx="56" cy="120" r="6" fill="#22150f"/>
+    <circle cx="104" cy="104" r="6" fill="#22150f"/>
+    <circle cx="152" cy="96" r="6" fill="#22150f"/>
+    <circle cx="216" cy="132" r="6" fill="#8f3a1b"/>
+    <circle cx="264" cy="64" r="8" fill="#0b5c50"/>
+  </g>
+  <circle cx="188" cy="112" r="14" fill="#ffffff" stroke="#b3261e" stroke-width="2.4"/>
+  <g fill="#b3261e" font-family="ui-monospace, SFMono-Regular, monospace" font-size="13" font-weight="700" text-anchor="middle"><text x="188" y="117">!</text></g>
+  <path d="M260 64 l3 3 l6 -7" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="ui-monospace, SFMono-Regular, monospace" font-size="9" fill="#c9b3a6">
+    <text x="236" y="52">plan</text>
+    <text x="222" y="150">run</text>
+  </g>
+</svg>

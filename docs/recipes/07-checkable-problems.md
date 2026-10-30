@@ -1,13 +1,15 @@
 ---
-title: Define a problem as metrics and datasets, and let an agent search for methods
-nav_title: "Let agents search for methods"
-recipe_id: R-01
+title: Turn open questions into checkable problems
+nav_title: "Make problems checkable"
+recipe_icon: target
+try: "Before any automated search, fix a metric, a baseline and at least three datasets."
+recipe_id: R-07
 status: tried
-stage: Analyze results
+stage: Implement with agents
 verifiability: Machine-checkable
 autonomy: Works alone against a fixed benchmark
 first_added: 2026-09-25
-last_reviewed: 2026-09-25
+last_reviewed: 2026-10-30
 skills: []
 practices:
   - title: Evaluate tools before trust
@@ -16,7 +18,8 @@ practices:
   - title: Match the method to the task
     slug: 01-match-method-to-task
     note: an agent search only makes sense if there is a metric.
-tags: [Analyze results, Machine-checkable]
+tags: [Implement with agents, Machine-checkable]
+comments: true
 ---
 
 <!-- RECIPE_TITLE -->
@@ -26,7 +29,8 @@ tags: [Analyze results, Machine-checkable]
 Write the research question as a metric, several datasets and a baseline.
 Then let an agent try methods: parameter sweeps, rewritten methods, or a search over code variants.
 The benchmark scores each attempt, so the agent does not need to be told which method to use.
-The quality of the problem definition limits the results more than the agent does.
+Specifying the problem is the hard part: the quality of the problem definition limits the results more than the agent does.
+Well-posed quantitative problems, such as benchmarks and tasks for virtual-cell models, are infrastructure that institutes should build.
 
 ## Steps
 
@@ -46,8 +50,10 @@ A result that improves only one dataset does not count.
 
 ## Examples
 
-- Agents added methods to a public benchmark and found which method parameters matter most.
-- One group plans to run its own code-search system instead of using an external provider.
+- On a public single-cell benchmark, agents help to find which parameters of a method matter most.
+- A published code-search system produced dozens of methods that beat every published entry on the same benchmark's leaderboard.
+- The centre is inviting its group leaders to add their own methods to a shared environment where agents optimize them against agreed metrics on central computing.
+- Benchmark communities such as Open Problems in single-cell analysis and CASP for protein structure prediction already define problems this way.
 
 ## Known problems
 
@@ -60,5 +66,7 @@ A result that improves only one dataset does not count.
 
 ## Change history
 
+- 2026-10-30: Renumbered to follow point 7 of the submitted Comment (formerly "Let agents search for methods").
+- 2026-10-28: Updated to match the presubmission draft of the Comment.
 - 2026-09-25: Updated to match the first full draft of the Comment.
 - 2026-09-25: First draft, from the first round-table.

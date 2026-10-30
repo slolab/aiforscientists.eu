@@ -1,0 +1,31 @@
+name: Disagree with a recipe
+description: A recipe does not work in your setting.
+title: "[Challenge] "
+labels: ["recipe-challenge", "triage"]
+body:
+  - type: input
+    id: recipe
+    attributes:
+      label: Which recipe
+      placeholder: "Recipe number and title"
+    validations:
+      required: true
+  - type: textarea
+    id: challenge
+    attributes:
+      label: What is wrong or incomplete
+    validations:
+      required: true
+  - type: textarea
+    id: case
+    attributes:
+      label: Concrete case
+      description: The situation where the recipe failed or did not apply. Cases carry the most weight.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: false

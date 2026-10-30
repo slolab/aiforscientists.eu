@@ -3,3 +3,7 @@ site/
 __pycache__/
 .DS_Store
 .lycheecache
+# Manuscript drafts stay out of the public repository.
+*.docx
+*.pdf
+~$*

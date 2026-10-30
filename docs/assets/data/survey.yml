@@ -1,0 +1,25 @@
+# Survey of group leaders at the Helmholtz Munich Computational Health Center,
+# September 2026 (36 of about 45 replied). Share of respondents who had handed
+# each research step at least partly to agents in the previous three months
+# (`handed`), and who would accept the output without re-checking
+# (`unchecked`). Source: Fig. 1c of the submitted Comment.
+respondents: 36
+groups:
+  - name: Doing research
+    key: doing
+    steps:
+      - {step: Literature search and extraction, handed: 94, unchecked: 14}
+      - {step: Writing papers or grants, handed: 89, unchecked: 6}
+      - {step: Analysis, handed: 83, unchecked: 0}
+      - {step: Experimental or model design, handed: 75, unchecked: 0}
+      - {step: Running and monitoring jobs, handed: 69, unchecked: 17}
+      - {step: Data download and QC, handed: 67, unchecked: 8}
+      - {step: Optimization and benchmarking, handed: 67, unchecked: 6}
+      - {step: Peer review, handed: 56, unchecked: 0}
+  - name: Running research
+    key: running
+    steps:
+      - {step: Choosing or triaging projects, handed: 56, unchecked: 3}
+      - {step: "Institute admin (reports, travel, CVs)", handed: 53, unchecked: 8}
+      - {step: Teaching, handed: 42, unchecked: 6}
+      - {step: Lab management and meetings, handed: 39, unchecked: 6}

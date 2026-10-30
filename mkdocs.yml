@@ -2,12 +2,14 @@ site_name: AI for Scientists
 site_url: https://aiforscientists.eu
 site_description: >-
   Recipes and skills for giving research tasks to agents.
+repo_url: https://github.com/slolab/aiforscientists.eu
+repo_name: slolab/aiforscientists.eu
+edit_uri: edit/main/docs/
 
-# Demo build: plain .html URLs so the built site also opens from disk.
-use_directory_urls: false
-
+# Skill pages are reached from the Skills overview, not the nav.
 not_in_nav: |
   /index.md
+  /skills/*-*.md
 
 watch:
   - overrides
@@ -25,6 +27,8 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - content.action.edit
+    - content.code.copy
 
 plugins:
   - search
@@ -34,6 +38,13 @@ plugins:
 # frontmatter, so each is spelled once.
 hooks:
   - hooks/recipe_pages.py
+  # Render each skill page and its copyable brief from frontmatter.
+  - hooks/skill_pages.py
+  # Draw the survey and quadrant charts as inline SVG.
+  - hooks/figures.py
+  # Emit llms.txt, llms-full.txt and per-page .md mirrors. Last, so it captures
+  # the same Markdown the pages render from (recipe titles already substituted).
+  - hooks/llms_txt.py
 
 markdown_extensions:
   - admonition
@@ -54,31 +65,51 @@ extra_css:
   - assets/css/home.css
   - assets/css/recipes.css
 
+# Home card effects, copied unchanged from aiforscience.eu: a cursor spotlight
+# and an animated dot landscape behind each card's graphic.
+extra_javascript:
+  - assets/js/card_spotlight.js
+  - assets/js/card_landscape.js
+
 nav:
   - Recipes:
       # Recipe labels come from each page's frontmatter `nav_title`
       # (applied by hooks/recipe_pages.py); only ordering lives here.
-      - recipes/01-search-for-methods.md
-      - recipes/02-run-experiments-on-fixed-code.md
-      - recipes/03-test-projects-before-assigning.md
-      - recipes/04-extract-and-query-literature.md
-      - recipes/05-project-documents-as-text.md
-      - recipes/06-schedule-lab-tasks.md
-      - recipes/07-fill-in-admin-forms.md
-      - recipes/08-writing-reviewing-teaching.md
-      - recipes/09-review-methods-restrict-files.md
-      - recipes/10-pairing-and-shared-skills.md
+      # Recipe N follows point N of the Comment "Delegate what you can check".
+      - "All recipes": recipes/index.md
+      - recipes/01-make-materials-accessible.md
+      - recipes/02-establish-guardrails.md
+      - recipes/03-learn-from-peers.md
+      - recipes/04-literature-as-data.md
+      - recipes/05-prototype-before-assigning.md
+      - recipes/06-let-checking-cost-decide.md
+      - recipes/07-checkable-problems.md
+      - recipes/08-pin-down-the-method.md
+      - recipes/09-write-review-teach.md
+      - recipes/10-automate-paperwork.md
       - "What went wrong": recipes/failures.md
   - Guide:
       - Delegate by verifiability: guide/verifiability.md
       - Where to draw the line: guide/limits.md
-      - Skills: skills.md
+      - Skills: skills/index.md
       - Tags: tags.md
   - About:
       - The idea: about/concept.md
       - How recipes work: about/how-it-works.md
       - Contribute: about/contribute.md
+      - Editors and review: about/editors.md
+      - Code of conduct: about/code-of-conduct.md
+
+extra:
+  # giscus comment threads under each recipe (overrides/partials/comments.html).
+  # Empty ids switch the threads off. Fill them in from https://giscus.app once
+  # Discussions are enabled on the repository and the category exists.
+  giscus:
+    repo: slolab/aiforscientists.eu
+    repo_id: R_kgDOUrd0KQ
+    category: Recipe comments
+    category_id: ""
 
 copyright: >-
-  Demo build. © 2026 AI for Scientists contributors. Content licensed
+  © 2026 AI for Scientists contributors. Content licensed
   <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>.

@@ -19,13 +19,14 @@
           <span class="afs-hero__logo">{% include "partials/logo.html" %}</span>
         </div>
         <p class="afs-hero__tagline">
-          Recipes for giving research tasks to agents.
-          Each recipe lists the steps, how to check the output, and known problems.
-          Written by scientists who use them. Anyone can contribute.
+          Recipes for giving research tasks to agents:
+          the steps, how to check the output, and the errors reported so far.
+          Skills come as briefs your agent can turn into a version for your own institute.
+          Anyone can contribute.
         </p>
         <div class="afs-hero__actions">
-          <a class="afs-hero__actions--primary" href="{{ 'recipes/01-search-for-methods.html' | url }}">Read the recipes →</a>
-          <a href="{{ 'guide/verifiability.html' | url }}">Which work to give to agents →</a>
+          <a class="afs-hero__actions--primary" href="{{ 'recipes/' | url }}">All recipes →</a>
+          <a href="{{ 'guide/verifiability/' | url }}">Which work to give to agents →</a>
         </div>
       </div>
 
@@ -33,32 +34,33 @@
           section so list, order and labels have one source (each page's
           `nav_title`, applied by hooks/recipe_pages.py). -#}
       <aside class="afs-hero-index" aria-label="The recipes">
-        <div class="afs-hero-index__head">
-          <span class="afs-hero-index__overline">The recipes</span>
-        </div>
-        {% for item in nav %}
-          {% if item.is_section and item.title == 'Recipes' %}
-            {% for p in item.children %}
-              {% if p.is_page and not p.file.src_uri.endswith('failures.md') %}
-                <a class="afs-hero-index__row" href="{{ p.url | url }}">
-                  <span class="afs-hero-index__num">{{ loop.index }}</span>
-                  <span class="afs-hero-index__title">{{ p.title }}</span>
-                </a>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
+        {#- Grouped under each recipe's frontmatter `stage`, in this order. -#}
+        {% for stage in ['Prepare for agents', 'Think with agents', 'Implement with agents'] %}
+          <span class="afs-hero-index__stage">{{ stage }}</span>
+          {% for item in nav %}
+            {% if item.is_section and item.title == 'Recipes' %}
+              {% for p in item.children %}
+                {% if p.is_page and p.file.name[:2].isdigit() and p.meta.stage == stage %}
+                  <a class="afs-hero-index__row" href="{{ p.url | url }}">
+                    <span class="afs-hero-index__num">{{ p.file.name[:2] | int }}</span>
+                    <span class="afs-hero-index__title">{{ p.title }}</span>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </aside>
     </div>
 
     <div class="afs-publication-strip">
       <div class="md-grid afs-publication-strip__grid">
-        <a class="afs-doi" href="https://aiforscience.eu">
-          <span class="afs-doi__key">See also</span>
-          <span class="afs-doi__val">aiforscience.eu</span>
-        </a>
-        <span class="afs-publication-strip__note">Best practices for agentic AI in science. Each recipe links to the practices it follows.</span>
-        <a class="afs-publication-strip__link" href="https://aiforscience.eu">Best practices →</a>
+        <span class="afs-doi">
+          <span class="afs-doi__key">Comment</span>
+          <span class="afs-doi__val">submitted</span>
+        </span>
+        <span class="afs-publication-strip__note">Theis, F. J. &amp; Helmholtz Munich Computational Health Center. Delegate what you can check: ten lessons on AI agents in research. A link follows on publication.</span>
+        <a class="afs-publication-strip__link" href="https://aiforscience.eu">Best practices: aiforscience.eu →</a>
       </div>
     </div>
 

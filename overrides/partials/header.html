@@ -17,11 +17,11 @@
     </a>
 
     {#- Primary entry point: the recipes, next to the title. -#}
-    <a class="afs-header-practices" href="{{ 'recipes/01-search-for-methods.html' | url }}" {% if page and page.url.startswith('recipes/') %}aria-current="page"{% endif %}>Recipes</a>
+    <a class="afs-header-practices" href="{{ 'recipes/' | url }}" {% if page and page.url.startswith('recipes/') %}aria-current="page"{% endif %}>Recipes</a>
 
     <div class="afs-header-nav" aria-label="Community">
-      <a href="{{ 'skills.html' | url }}" {% if page and page.url.startswith('skills') %}aria-current="page"{% endif %}>Skills</a>
-      <a href="{{ 'about/contribute.html' | url }}" {% if page and page.url.startswith('about/contribute') %}aria-current="page"{% endif %}>Contribute</a>
+      <a href="{{ 'skills/' | url }}" {% if page and page.url.startswith('skills') %}aria-current="page"{% endif %}>Skills</a>
+      <a href="{{ 'about/contribute/' | url }}" {% if page and page.url.startswith('about/contribute') %}aria-current="page"{% endif %}>Contribute</a>
       <a href="https://aiforscience.eu" target="_blank" rel="noopener noreferrer">
         Practices
         <span class="afs-header-nav__ext" aria-hidden="true">{% include ".icons/material/open-in-new.svg" %}</span>

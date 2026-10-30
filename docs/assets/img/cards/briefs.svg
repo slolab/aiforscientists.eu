@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" width="100%" height="100%">
+  <!-- Skill briefs: one brief branches into local versions, one per institute. -->
+  <g fill="none" stroke="#8f3a1b" stroke-width="1.2" stroke-linecap="round">
+    <path d="M128 90 C170 90 170 48 206 48"/>
+    <path d="M128 90 L206 90"/>
+    <path d="M128 90 C170 90 170 132 206 132"/>
+  </g>
+  <rect x="72" y="52" width="56" height="76" rx="6" fill="#ffffff" stroke="#22150f" stroke-width="1.4"/>
+  <g fill="#22150f">
+    <rect x="82" y="64" width="30" height="4" rx="2"/>
+  </g>
+  <g fill="#c8552b" fill-opacity="0.4">
+    <rect x="82" y="76" width="36" height="3" rx="1.5"/>
+    <rect x="82" y="84" width="28" height="3" rx="1.5"/>
+    <rect x="82" y="92" width="34" height="3" rx="1.5"/>
+  </g>
+  <g fill="none" stroke="#c8552b" stroke-width="1.2" stroke-dasharray="3 3">
+    <rect x="80" y="102" width="40" height="16" rx="3"/>
+  </g>
+  <g fill="#c8552b"><text x="100" y="114" font-family="ui-monospace, SFMono-Regular, monospace" font-size="10" font-weight="700" text-anchor="middle">?</text></g>
+  <g stroke="#ffffff" stroke-width="2">
+    <rect x="206" y="34" width="42" height="28" rx="5" fill="#2a62a8"/>
+    <rect x="206" y="76" width="42" height="28" rx="5" fill="#c8552b"/>
+    <rect x="206" y="118" width="42" height="28" rx="5" fill="#0b5c50"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.8">
+    <rect x="214" y="44" width="24" height="3" rx="1.5"/>
+    <rect x="214" y="51" width="16" height="3" rx="1.5"/>
+    <rect x="214" y="86" width="24" height="3" rx="1.5"/>
+    <rect x="214" y="93" width="16" height="3" rx="1.5"/>
+    <rect x="214" y="128" width="24" height="3" rx="1.5"/>
+    <rect x="214" y="135" width="16" height="3" rx="1.5"/>
+  </g>
+  <circle cx="128" cy="90" r="5" fill="#22150f" stroke="#ffffff" stroke-width="2"/>
+</svg>

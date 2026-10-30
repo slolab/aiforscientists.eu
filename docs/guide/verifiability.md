@@ -22,27 +22,31 @@ Examples: a cross-validation scheme changed without anyone noticing, a metric im
 
 Each recipe shows its level in the box "About this recipe".
 
+## What group leaders accept without checking
+
+In a survey at the Helmholtz Munich Computational Health Center, 36 of about 45 group leaders said which of 12 research steps they had given to agents in the previous three months, and for which steps they would accept the output without checking it again.
+
+- Every respondent had given at least one step to agents.
+  The most common were literature search (94%), writing (89%) and analysis (83%).
+- Only 9% of all delegations came with a willingness to accept the output unchecked.
+  64% of respondents would not accept unchecked output for any step.
+- Nobody accepted unchecked analysis, experimental design or peer review.
+- The least common were administration (53%), teaching (42%) and lab management (39%).
+- The steps most often accepted unchecked were running computing jobs (17%) and literature search (14%).
+  Both are quick to check.
+- 31% had seen an agent error reach a shared result.
+  For 8%, the error was caught only by a co-author or reviewer.
+- The median respondent estimated saving 3 to 5 hours a week.
+- 78% said that agents had changed which projects they start.
+- The most common obstacle was time to learn (53%).
+
+<!-- FIGURE: survey -->
+
+These are self-reports from one centre with a computational focus.
+
 ## How much freedom to give an agent
 
-<div class="afs-quadrants" markdown="0">
-  <div class="afs-quadrant afs-quadrant--danger">
-    <strong>Danger</strong>
-    <p>Hard to check, high freedom. All reported errors happened here: changed methods, tuned seeds, open folders.</p>
-  </div>
-  <div class="afs-quadrant afs-quadrant--automate">
-    <strong>Automate</strong>
-    <p>Easy to check, high freedom. Custom kernels, experiments on fixed code, job monitoring, reimbursement forms.</p>
-  </div>
-  <div class="afs-quadrant afs-quadrant--human">
-    <strong>Keep human</strong>
-    <p>Hard to check, low freedom. New hypotheses, peer-review judgments, decisions about people.</p>
-  </div>
-  <div class="afs-quadrant afs-quadrant--underused">
-    <strong>Underused</strong>
-    <p>Easy to check, not yet given to agents. Most administration, literature tables, pre-submission checks.</p>
-  </div>
-</div>
-<p class="afs-quadrants__axes">Left to right: harder to easier to check. Bottom to top: less to more freedom for the agent.</p>
+<!-- FIGURE: quadrants -->
 
 - **Delegate.** Start with the underused tasks. If the output is easy to check and agents are not doing the task yet, start there.
 - **Add checks.** Before giving agents more freedom on a risky task, make its output checkable. Add tests, metrics and datasets until the output is easy to check.
@@ -53,6 +57,6 @@ Each recipe shows its level in the box "About this recipe".
 2. Running experiments on tested code that the agent cannot change.
 3. Writing new code, with a person reviewing every change.
 
-[Run experiments on fixed code](../recipes/02-run-experiments-on-fixed-code.md) shows these steps in practice.
+[Let checking cost set freedom](../recipes/06-let-checking-cost-decide.md) shows these steps in practice.
 Some decisions stay with people even when checking is easy.
 See [Where to draw the line](limits.md).

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Open-ended discussion
+    url: https://github.com/slolab/aiforscientists.eu/discussions
+    about: Questions, ideas, and anything that is not yet an example, error report, skill or recipe.
+  - name: No GitHub account? Write to the Google Group
+    url: https://groups.google.com/g/aiforscience
+    about: aiforscience@googlegroups.com, shared with aiforscience.eu. Start the subject with "aiforscientists".

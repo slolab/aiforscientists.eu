@@ -1,0 +1,36 @@
+name: Report an error
+description: An agent made an error that others should know about.
+title: "[Error] "
+labels: ["error-report", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Names and details are removed before an error is added to "What went wrong". Do not include personal data, patient data or confidential results here.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What the agent was asked to do, and what it did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: found
+    attributes:
+      label: How it was found
+      description: Who noticed, when, and how.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: What it affected
+      description: For example a result, a shared folder, a submitted form.
+    validations:
+      required: false
+  - type: textarea
+    id: prevent
+    attributes:
+      label: What would have prevented it
+      description: A step, a check or a guardrail. Name a recipe if one applies.
+    validations:
+      required: false

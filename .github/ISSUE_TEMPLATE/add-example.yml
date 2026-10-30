@@ -1,0 +1,45 @@
+name: Add an example
+description: You used a recipe in your group. Say what worked and what did not.
+title: "[Example] "
+labels: ["example", "triage"]
+body:
+  - type: input
+    id: recipe
+    attributes:
+      label: Which recipe
+      placeholder: "Recipe number and title"
+    validations:
+      required: true
+  - type: textarea
+    id: setting
+    attributes:
+      label: Your setting
+      description: Field, kind of group, tools and models used. No names needed.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What you did
+      description: Which steps you followed, and what you changed.
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: How you checked the output
+      description: Who or what checked it, and how long it took.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What worked and what did not
+    validations:
+      required: true
+  - type: checkboxes
+    id: naming
+    attributes:
+      label: Attribution
+      options:
+        - label: Name me or my group with this example. (Unticked, the example is published without names.)
